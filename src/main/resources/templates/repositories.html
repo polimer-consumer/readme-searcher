@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repository List</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<h1>Repositories (yellow marked are with "hello" in ReadMe)</h1>
+<ul>
+    <li th:each="repo : ${repositories}" th:class="${repo.isHighlighted ? 'highlight' : ''}">
+        <a th:text="${repo.name}">Repository Name</a>
+    </li>
+
+</ul>
+</body>
+</html>

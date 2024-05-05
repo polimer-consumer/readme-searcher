@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub API + Spring app</title>
+</head>
+<body>
+<h1>Enter org name and API token</h1>
+<form th:action="@{/repositories}" method="post">
+    <div>
+        <label for="orgLink">GitHub organization name</label>
+        <input type="text" id="orgLink" name="orgLink" required>
+    </div>
+    <div>
+        <label for="accessToken">API token:</label>
+        <input type="text" id="accessToken" name="accessToken" required>
+    </div>
+    <div>
+        <button type="submit">Go</button>
+    </div>
+</form>
+</body>
+</html>
